@@ -1,0 +1,37 @@
+@import 'variables'
+
+body
+  font: 100% sans-serif
+  background-color: #fdfdfd
+
+nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+
+li
+  display: inline-block
+
+a
+  display: block
+  padding: 6px 12px
+  text-decoration: $environment-notice-height
+
+= border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+   border-radius:        $radius
+
+.row {
+  display: -webkit-flex
+  display: flex
+}
+
+@mixin grid($flex: true, $max-width) {
+  @if $flex {
+    @include flex
+  } @else {
+    display: block
+}
